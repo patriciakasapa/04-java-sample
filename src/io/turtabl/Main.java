@@ -4,6 +4,7 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BinaryOperator;
 
 public class Main {
     private String Borrower;
@@ -25,15 +26,22 @@ public class Main {
                 new Borrower("Wonder Marvel", 129, BorrowerType.Child)
         );
 
-        List<Borrower> Gold = new ArrayList<>();
-        for(Borrower g:
-
-
+        List<Borrower> goldBorrowers = new ArrayList<>();
+        for(Borrower g: borrower){
+            if (g.getBorrowerType() == BorrowerType.Gold) {
+                System.out.println(g.getName());
             }
+
+
         }
 
-        List<Book> book = Arrays.asList(
-                new Book("Comic", "Skoobie Doo", BookState.Borrowed),
+
+        List<Book> bookList = Arrays.asList(
+                new Book(Category.Fiction, "Skoobie Doo", BookState.Borrowed),
+                new Book(Category.Romance, "Into the wild lands", BookState.Available),
+                new Book(Category.Adventure, "Snake Girl", BookState.Lost),
+                new Book(Category.Fiction, "Taalia", BookState.Borrowed)
+
 
         );
          System.out.println("Hello, turntabl!");
