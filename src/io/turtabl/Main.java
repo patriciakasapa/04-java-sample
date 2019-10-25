@@ -41,9 +41,12 @@ public class Main {
                 new Book(Category.Romance, "Into the wild lands", BookState.Available),
                 new Book(Category.Adventure, "Snake Girl", BookState.Lost),
                 new Book(Category.Fiction, "Taalia", BookState.Borrowed)
-
-
         );
+
+        List<Book> availableBooks = new ArrayList<>();
+        for(Book bo: bookList){
+            if (bo)
+        }
          System.out.println("Hello, turntabl!");
 
     }
